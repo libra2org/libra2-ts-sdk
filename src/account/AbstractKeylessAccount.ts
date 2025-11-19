@@ -1,4 +1,5 @@
 // Copyright © Aptos Foundation
+// Copyright © Libra2 Research
 // SPDX-License-Identifier: Apache-2.0
 
 import EventEmitter from "eventemitter3";
@@ -370,7 +371,7 @@ export abstract class AbstractKeylessAccount extends Serializable implements Key
     } else {
       // eslint-disable-next-line no-console
       console.warn(
-        "[Aptos SDK] The verification key hash was not set. Proof may be invalid if the verification key has rotated.",
+        "[Libra2 SDK] The verification key hash was not set. Proof may be invalid if the verification key has rotated.",
       );
     }
     await AbstractKeylessAccount.fetchJWK({ aptosConfig, publicKey: this.publicKey, kid: header.kid });

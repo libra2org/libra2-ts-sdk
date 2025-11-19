@@ -1,19 +1,19 @@
-# TypeScript SDK for Aptos
+# TypeScript SDK for Libra2
 
 ![License][github-license]
 [![Discord][discord-image]][discord-url]
 [![NPM Package Version][npm-image-version]][npm-url]
-![Node Version](https://img.shields.io/node/v/%40aptos-labs%2Fts-sdk)
-![NPM bundle size](https://img.shields.io/bundlephobia/min/%40aptos-labs/ts-sdk)
+![Node Version](https://img.shields.io/node/v/%40libra2org%2Fts-sdk)
+![NPM bundle size](https://img.shields.io/bundlephobia/min/%40libra2org/ts-sdk)
 [![NPM Package Downloads][npm-image-downloads]][npm-url]
 
-The [TypeScript SDK](https://www.npmjs.com/package/@aptos-labs/ts-sdk) allows you to connect, explore, and interact with the Aptos blockchain. You can use it to request data, send transactions, set up test environments, and more!
+The [TypeScript SDK](https://www.npmjs.com/package/@libra2org/ts-sdk) allows you to connect, explore, and interact with the Libra2 blockchain. You can use it to request data, send transactions, set up test environments, and more!
 
 ## Learn How To Use The TypeScript SDK
-### [Quickstart](https://aptos.dev/en/build/sdks/ts-sdk/quickstart)
-### [Tutorials](https://aptos.dev/en/build/sdks/ts-sdk)
+### [Quickstart](https://libra2.org/en/build/sdks/ts-sdk/quickstart)
+### [Tutorials](https://libra2.org/en/build/sdks/ts-sdk)
 ### [Examples](./examples/README.md)
-### [Reference Docs (For looking up specific functions)](https://aptos-labs.github.io/aptos-ts-sdk/)
+### [Reference Docs (For looking up specific functions)](https://libra2org.github.io/libra2-ts-sdk/)
 
 ## Installation
 
@@ -22,7 +22,7 @@ The [TypeScript SDK](https://www.npmjs.com/package/@aptos-labs/ts-sdk) allows yo
 Install with your favorite package manager such as npm, yarn, or pnpm:
 
 ```bash
-pnpm install @aptos-labs/ts-sdk
+pnpm install @libra2org/ts-sdk
 ```
 
 ### For use in a browser (<= version 1.9.1 only)
@@ -30,25 +30,25 @@ pnpm install @aptos-labs/ts-sdk
 You can add the SDK to your web application using a script tag:
 
 ```html
-<script src="https://unpkg.com/@aptos-labs/ts-sdk/dist/browser/index.global.js"></script>
+<script src="https://unpkg.com/@libra2org/ts-sdk/dist/browser/index.global.js"></script>
 ```
 
-Then, the SDK can be accessed through `window.aptosSDK`.
+Then, the SDK can be accessed through `window.libra2SDK`.
 
 ## Usage
 
-Create an `Aptos` client in order to access the SDK's functionality.
+Create a `Libra2` client in order to access the SDK's functionality.
 
 ```ts
-import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk"
+import { Libra2, Libra2Config, Network } from "@libra2org/ts-sdk"
 
-// You can use AptosConfig to choose which network to connect to
-const config = new AptosConfig({ network: Network.TESTNET });
-// Aptos is the main entrypoint for all functions
-const aptos = new Aptos(config);
+// You can use Libra2Config to choose which network to connect to
+const config = new Libra2Config({ network: Network.TESTNET });
+// Libra2 is the main entrypoint for all functions
+const aptos = new Libra2(config);
 ```
 
-### Reading Data From Onchain ([Guide](https://aptos.dev/en/build/sdks/ts-sdk/fetch-data-via-sdk))
+### Reading Data From Onchain ([Guide](https://libra2.org/en/build/sdks/ts-sdk/fetch-data-via-sdk))
 
 ---
 
@@ -88,7 +88,7 @@ const account = Account.fromPrivateKey({ privateKey });
 
 // Also, can use this function that resolves the provided private key type and derives the public key from it
 // to support key rotation and differentiation between Legacy Ed25519 and Unified authentications
-const aptos = new Aptos();
+const aptos = new Libra2();
 const account = await aptos.deriveAccountFromPrivateKey({ privateKey });
 ```
 
@@ -116,29 +116,29 @@ const mnemonic = "various float stumble...";
 const account = Account.fromDerivationPath({ path, mnemonic });
 ```
 
-### Submit transaction ([Tutorial](https://aptos.dev/en/build/sdks/ts-sdk/building-transactions))
+### Submit transaction ([Tutorial](https://libra2.org/en/build/sdks/ts-sdk/building-transactions))
 
 ---
 
 ```ts
 /**
- * This example shows how to use the Aptos SDK to send a transaction.
- * Don't forget to install @aptos-labs/ts-sdk before running this example!
+ * This example shows how to use the Libra2 SDK to send a transaction.
+ * Don't forget to install @libra2org/ts-sdk before running this example!
  */
  
 import {
     Account,
-    Aptos,
-    AptosConfig,
+    Libra2,
+    Libra2Config,
     Network,
-} from "@aptos-labs/ts-sdk";
+} from "@libra2org/ts-sdk";
  
 async function example() {
     console.log("This example will create two accounts (Alice and Bob) and send a transaction transferring APT to Bob's account.");
  
     // 0. Setup the client and test accounts
-    const config = new AptosConfig({ network: Network.TESTNET });
-    const aptos = new Aptos(config);
+    const config = new Libra2Config({ network: Network.TESTNET });
+    const aptos = new Libra2(config);
  
     let alice = Account.generate();
     let bob = Account.generate();
@@ -163,7 +163,7 @@ async function example() {
     const transaction = await aptos.transaction.build.simple({
         sender: alice.accountAddress,
         data: {
-        // All transactions on Aptos are implemented via smart contracts.
+        // All transactions on Libra2 are implemented via smart contracts.
         function: "0x1::aptos_account::transfer",
         functionArguments: [bob.accountAddress, 100],
         },
@@ -209,16 +209,16 @@ example();
 If you see an import error when you do this:
 
 ```typescript
-import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+import { Libra2, Libra2Config, Network } from "@libra2org/ts-sdk";
 ```
 
 It could be that your `tsconfig.json` is not using `node`. Make sure your `moduleResolution` in the `tsconfig.json` is set to `node` instead of `bundler`.
 
 ## Contributing
 
-If you found a bug or would like to request a feature, please file an [issue](https://github.com/aptos-labs/aptos-ts-sdk/issues/new/choose).
-If, based on the discussion on an issue, you would like to offer a code change, please make a [pull request](https://github.com/aptos-labs/aptos-ts-sdk/pulls).
-If neither of these describes what you would like to contribute, check out the [contributing guide](https://github.com/aptos-labs/aptos-ts-sdk/blob/main/CONTRIBUTING.md).
+If you found a bug or would like to request a feature, please file an [issue](https://github.com/libra2org/libra2-ts-sdk/issues/new/choose).
+If, based on the discussion on an issue, you would like to offer a code change, please make a [pull request](https://github.com/libra2org/libra2-ts-sdk/pulls).
+If neither of these describes what you would like to contribute, check out the [contributing guide](https://github.com/libra2org/libra2-ts-sdk/blob/main/CONTRIBUTING.md).
 
 ## Running unit tests
 
@@ -227,10 +227,10 @@ To run a unit test in this repo, for example, the keyless end-to-end unit test i
 pnpm jest keyless.test.ts
 ```
 
-[npm-image-version]: https://img.shields.io/npm/v/%40aptos-labs%2Fts-sdk.svg
-[npm-image-downloads]: https://img.shields.io/npm/dm/%40aptos-labs%2Fts-sdk.svg
-[npm-url]: https://npmjs.org/package/@aptos-labs/ts-sdk
-[experimental-url]: https://www.npmjs.com/package/@aptos-labs/ts-sdk/v/experimental
+[npm-image-version]: https://img.shields.io/npm/v/%40libra2org%2Fts-sdk.svg
+[npm-image-downloads]: https://img.shields.io/npm/dm/%40libra2org%2Fts-sdk.svg
+[npm-url]: https://npmjs.org/package/@libra2org/ts-sdk
+[experimental-url]: https://www.npmjs.com/package/@libra2org/ts-sdk/v/experimental
 [discord-image]: https://img.shields.io/discord/945856774056083548?label=Discord&logo=discord&style=flat
-[discord-url]: https://discord.gg/aptosnetwork
-[github-license]: https://img.shields.io/github/license/aptos-labs/aptos-ts-sdk
+[discord-url]: https://discord.gg/libra2
+[github-license]: https://img.shields.io/github/license/libra2org/libra2-ts-sdk

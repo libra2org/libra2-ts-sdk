@@ -7,7 +7,7 @@ import {
     Network,
     NetworkToNetworkName,
     SimpleTransaction,
-} from '@aptos-labs/ts-sdk';
+} from '@libra2org/ts-sdk';
 
 const app = express();
 app.use(express.json());

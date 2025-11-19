@@ -1,15 +1,15 @@
 {
-  "name": "@aptos-labs/confidential-assets",
-  "description": "Aptos Confidential Assets SDK",
+  "name": "@libra2org/confidential-assets",
+  "description": "Libra2 Confidential Assets SDK",
   "packageManager": "pnpm@8.15.1",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=20.0.0"
   },
   "bugs": {
-    "url": "https://github.com/aptos-labs/aptos-ts-sdk/issues/new/choose"
+    "url": "https://github.com/libra2org/libra2-ts-sdk/issues/new/choose"
   },
-  "homepage": "https://aptos-labs.github.io/aptos-ts-sdk/",
+  "homepage": "https://libra2.org/",
   "version": "0.6.0",
   "sideEffects": false,
   "main": "dist/common/index.js",
@@ -43,10 +43,10 @@
     "publish-zeta": "pnpm build && npm publish --tag zeta"
   },
   "dependencies": {
-    "@aptos-labs/confidential-asset-wasm-bindings": "^0.0.2",
-    "@aptos-labs/ts-sdk": "^5.0.0",
     "@noble/curves": "^1.6.0",
-    "@noble/hashes": "^1.5.0"
+    "@noble/hashes": "^1.5.0",
+    "@libra2org/ts-sdk": "^5.0.0",
+    "@libra2org/confidential-asset-wasm-bindings": "^0.0.2"
   },
   "devDependencies": {
     "@swc/cli": "^0.7.8",

@@ -1,4 +1,5 @@
 // Copyright © Aptos Foundation
+// Copyright © Libra2 Research
 // SPDX-License-Identifier: Apache-2.0
 
 import { secp256k1 } from "@noble/curves/secp256k1";

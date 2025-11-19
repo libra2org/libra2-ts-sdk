@@ -1,7 +1,8 @@
 // Copyright © Aptos Foundation
+// Copyright © Libra2 Research
 // SPDX-License-Identifier: Apache-2.0
 
-import { AccountAddressInput, Network } from "@aptos-labs/ts-sdk";
+import { AccountAddressInput, Network } from "@libra2org/ts-sdk";
 
 /**
  * The global cache Map shared across all functions.  Must keep care to ensure that the

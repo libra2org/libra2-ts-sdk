@@ -2,7 +2,7 @@
 /* eslint-disable max-len */
 import dotenv from "dotenv";
 dotenv.config();
-import { Account, AccountAddress, Aptos, AptosConfig, Network, NetworkToNetworkName } from "@aptos-labs/ts-sdk";
+import { Account, AccountAddress, Aptos, AptosConfig, Network, NetworkToNetworkName } from "@libra2org/ts-sdk";
 import { compilePackage, getPackageBytesToPublish } from "./utils";
 
 /**
@@ -10,8 +10,8 @@ import { compilePackage, getPackageBytesToPublish } from "./utils";
  * It uses the `MoonCoin.move()` module that can be found in this folder
  *
  * Before running this example, we should compile the package locally:
- * 1. Acquire the Aptos CLI, see https://aptos.dev/tools/aptos-cli/
- * 2. cd `~/aptos-ts-sdk/examples/typescript`
+ * 1. Acquire the Libra2 CLI, see https://libra2.org
+ * 2. cd `~/libra2-ts-sdk/examples/typescript`
  * 3. Run `pnpm run your_coin`
  */
 
@@ -100,7 +100,7 @@ async function main() {
     amount: 100_000_000,
   });
 
-  // Please ensure you have the aptos CLI installed
+  // Please ensure you have the libra2 CLI installed
   console.log("\n=== Compiling MoonCoin package locally ===");
   compilePackage("move/moonCoin", "move/moonCoin/moonCoin.json", [{ name: "MoonCoin", address: alice.accountAddress }]);
 

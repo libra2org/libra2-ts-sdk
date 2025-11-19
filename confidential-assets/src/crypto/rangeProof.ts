@@ -1,4 +1,5 @@
 // Copyright © Aptos Foundation
+// Copyright © Libra2 Research
 // SPDX-License-Identifier: Apache-2.0
 
 import initWasm, {
@@ -6,10 +7,10 @@ import initWasm, {
   verify_proof as verifyProof,
   batch_range_proof as batchRangeProof,
   batch_verify_proof as batchVerifyProof,
-} from "@aptos-labs/confidential-asset-wasm-bindings/range-proofs";
+} from "@libra2org/confidential-asset-wasm-bindings/range-proofs";
 
 const RANGE_PROOF_WASM_URL =
-  "https://unpkg.com/@aptos-labs/confidential-asset-wasm-bindings@0.0.2/range-proofs/aptos_rp_wasm_bg.wasm";
+  "https://unpkg.com/@libra2org/confidential-asset-wasm-bindings@0.0.2/range-proofs/libra2_rp_wasm_bg.wasm";
 
 export interface RangeProofInputs {
   v: bigint;

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Account, Aptos, AptosConfig, Network, } from '@aptos-labs/ts-sdk';
+import { Account, Aptos, AptosConfig, Network, } from '@libra2org/ts-sdk';
 
 const main = async () => {
     const config = new AptosConfig({ network: Network.DEVNET });

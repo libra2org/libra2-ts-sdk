@@ -2,8 +2,8 @@
 
 # Owners for the `.github` directory and all its subdirectories.
 
-/.github/ @aptos-labs/developer-platform @aptos-labs/security
+/.github/ @libra2org @libra2org
 
 # Auto-reviewers for all code
 
-* @aptos-labs/developer-platform
+* @libra2org

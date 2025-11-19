@@ -10,7 +10,7 @@ import {
   UserTransactionResponse,
   Serializer,
   NetworkToNetworkName,
-} from "@aptos-labs/ts-sdk";
+} from "@libra2org/ts-sdk";
 import { compilePackage, getPackageBytesToPublish } from "./utils";
 
 const APTOS_NETWORK: Network = NetworkToNetworkName[process.env.APTOS_NETWORK ?? Network.DEVNET];

@@ -20,7 +20,7 @@ import {
   Ed25519Account,
   SimpleTransaction,
   InputViewFunctionJsonData,
-} from "@aptos-labs/ts-sdk";
+} from "@libra2org/ts-sdk";
 
 const APTOS_COIN = "0x1::aptos_coin::AptosCoin";
 const COLD_INITIAL_BALANCE = 100_000_000;

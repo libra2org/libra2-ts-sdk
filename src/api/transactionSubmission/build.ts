@@ -1,4 +1,5 @@
 // Copyright © Aptos Foundation
+// Copyright © Libra2 Research
 // SPDX-License-Identifier: Apache-2.0
 
 import { AccountAddressInput } from "../../core";
@@ -30,7 +31,7 @@ export class Build {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * async function runExample() {
    *     // Create a configuration for the Aptos client
@@ -66,7 +67,7 @@ export class Build {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -114,7 +115,7 @@ export class Build {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);

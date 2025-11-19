@@ -19,7 +19,7 @@ import {
   Network,
   NetworkToNetworkName,
   SimpleTransaction,
-} from "@aptos-labs/ts-sdk";
+} from "@libra2org/ts-sdk";
 
 const INITIAL_BALANCE = 100_000_000;
 const TRANSFER_AMOUNT = 100;
