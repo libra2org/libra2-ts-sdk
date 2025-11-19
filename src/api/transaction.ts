@@ -1,4 +1,5 @@
 // Copyright © Aptos Foundation
+// Copyright © Libra2 Research
 // SPDX-License-Identifier: Apache-2.0
 
 import { AptosConfig } from "./aptosConfig";
@@ -54,7 +55,7 @@ import { rotateAuthKey, rotateAuthKeyUnverified } from "../internal/account";
  * This class is used as part of the Aptos object, so should be called like so:
  * @example
  * ```typescript
- * import { Account, Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+ * import { Account, Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
  *
  * const APTOS_COIN = "0x1::aptos_coin::AptosCoin";
  * const COIN_STORE = `0x1::coin::CoinStore<${APTOS_COIN}>`;
@@ -150,7 +151,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * async function runExample() {
    *     // Create a new Aptos client instance
@@ -184,7 +185,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -221,7 +222,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -251,7 +252,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -283,7 +284,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -327,7 +328,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -368,7 +369,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET }); // Specify your network
    * const aptos = new Aptos(config);
@@ -397,7 +398,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -427,8 +428,8 @@ export class Transaction {
    * Generates a transaction to publish a Move package to the blockchain.
    * This function helps you create a transaction that can be simulated or submitted to the chain for publishing a package.
    *
-   * To get the `metadataBytes` and `byteCode`, can compile using Aptos CLI with command
-   * `aptos move compile --save-metadata ...`,
+   * To get the `metadataBytes` and `byteCode`, can compile using Libra2 CLI with command
+   * `libra2 move compile --save-metadata ...`,
    *
    * {@link https://aptos.dev/tutorials/your-first-dapp/#step-4-publish-a-move-module}
    *
@@ -442,7 +443,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -568,7 +569,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -613,7 +614,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -663,7 +664,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network, Account } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network, Account } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -710,7 +711,7 @@ export class Transaction {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);

@@ -1,4 +1,5 @@
 // Copyright © Aptos Foundation
+// Copyright © Libra2 Research
 // SPDX-License-Identifier: Apache-2.0
 
 import aptosClient from "@aptos-labs/aptos-client";
@@ -24,12 +25,12 @@ import {
 import { AptosApiType, DEFAULT_MAX_GAS_AMOUNT, DEFAULT_TXN_EXP_SEC_FROM_NOW } from "../utils/const";
 
 /**
- * Represents the configuration settings for an Aptos SDK client instance.
+ * Represents the configuration settings for an Libra2 SDK client instance.
  * This class allows customization of various endpoints and client settings.
  *
  * @example
  * ```typescript
- * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+ * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
  *
  * async function runExample() {
  *     // Create a configuration for connecting to the Aptos testnet
@@ -142,7 +143,7 @@ export class AptosConfig {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * async function runExample() {
    *     // Create a new Aptos client with default settings
@@ -193,7 +194,7 @@ export class AptosConfig {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network, AptosApiType } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network, AptosApiType } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -249,7 +250,7 @@ export class AptosConfig {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);
@@ -278,7 +279,7 @@ export class AptosConfig {
    *
    * @example
    * ```typescript
-   * import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+   * import { Aptos, AptosConfig, Network } from "@libra2org/ts-sdk";
    *
    * const config = new AptosConfig({ network: Network.TESTNET });
    * const aptos = new Aptos(config);

@@ -7,7 +7,7 @@
 
 import dotenv from "dotenv";
 dotenv.config();
-import { Account, Aptos, AptosConfig, Network, NetworkToNetworkName } from "@aptos-labs/ts-sdk";
+import { Account, Aptos, AptosConfig, Network, NetworkToNetworkName } from "@libra2org/ts-sdk";
 
 const INITIAL_BALANCE = 100_000_000;
 

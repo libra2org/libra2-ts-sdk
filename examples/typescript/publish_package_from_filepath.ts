@@ -3,8 +3,8 @@
  * read from a local path.
  *
  * Before running this example, we should compile the package locally:
- * 1. Acquire the Aptos CLI, see https://aptos.dev/cli-tools/aptos-cli/use-cli/install-aptos-cli
- * 2. cd `~/aptos-ts-sdk/examples/typescript`
+ * 1. Acquire the Libra2 CLI, see https://libra2.org
+ * 2. cd `~/libra2-ts-sdk/examples/typescript`
  * 3. Run `pnpm run publish_package_from_filepath` and follow the prompt
  */
 /* eslint-disable no-console */
@@ -13,7 +13,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import assert from "assert";
-import { Account, Aptos, AptosConfig, Hex, Network, NetworkToNetworkName } from "@aptos-labs/ts-sdk";
+import { Account, Aptos, AptosConfig, Hex, Network, NetworkToNetworkName } from "@libra2org/ts-sdk";
 import { compilePackage, getPackageBytesToPublish } from "./utils";
 
 const APTOS_NETWORK: Network = NetworkToNetworkName[process.env.APTOS_NETWORK ?? Network.DEVNET];
@@ -30,7 +30,7 @@ async function main() {
 
   await aptos.fundAccount({ accountAddress: alice.accountAddress, amount: 100_000_000 });
 
-  // Please ensure you have the aptos CLI installed
+  // Please ensure you have the libra2 CLI installed
   console.log("\n=== Compiling the package locally ===");
   compilePackage("move/facoin", "move/facoin/publish_payload.json", [
     { name: "FACoin", address: alice.accountAddress },

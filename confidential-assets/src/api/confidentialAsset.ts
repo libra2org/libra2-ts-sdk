@@ -1,4 +1,5 @@
 // Copyright © Aptos Foundation
+// Copyright © Libra2 Research
 // SPDX-License-Identifier: Apache-2.0
 
 import {
@@ -10,7 +11,7 @@ import {
   InputGenerateTransactionOptions,
   LedgerVersionArg,
   SimpleTransaction,
-} from "@aptos-labs/ts-sdk";
+} from "@libra2org/ts-sdk";
 import { TwistedEd25519PublicKey, TwistedEd25519PrivateKey, ConfidentialNormalization } from "../crypto";
 import { clearBalanceCache, clearEncryptionKeyCache, getEncryptionKeyCacheKey, setCache } from "../utils/memoize";
 import {

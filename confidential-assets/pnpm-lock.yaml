@@ -8,7 +8,7 @@ dependencies:
   '@aptos-labs/confidential-asset-wasm-bindings':
     specifier: ^0.0.2
     version: 0.0.2
-  '@aptos-labs/ts-sdk':
+  '@libra2org/ts-sdk':
     specifier: ^5.0.0
     version: 5.0.0(got@11.8.6)
   '@noble/curves':
@@ -89,7 +89,7 @@ packages:
     resolution: {integrity: sha512-xfgRVc4WX4N7hjSHP91a3o686gC4307PGa9eDT7eWhp2VN9YgYhDIKRFRITpKT5JC7IXbuh6pGq1MqrqTjBokA==}
     dev: false
 
-  /@aptos-labs/ts-sdk@5.0.0(got@11.8.6):
+  /@libra2org/ts-sdk@5.0.0(got@11.8.6):
     resolution: {integrity: sha512-s0vfH9Yduaosv+1eKsHjf5W0Fc02BlEpPL68488D7e4XsGQuzpVMxQPjjajYtSyyd9Bmmjat+wxM3mH5QBZkYg==}
     engines: {node: '>=20.0.0'}
     dependencies:

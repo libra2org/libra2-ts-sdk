@@ -8,9 +8,9 @@ title: Contributing to the Aptos TypeScript SDK
 Our goal is to make contributing to Aptos TypeScript SDK easy and transparent. See [Aptos Community](https://aptos.dev/community)
 for full details. This page describes [our development process](#our-development-process).
 
-## Aptos SDK
+## Libra2 SDK
 
-To contribute to the Aptos SDK implementation, first fork the [aptos-ts-sdk](https://github.com/aptos-labs/aptos-ts-sdk)
+To contribute to the Libra2 SDK implementation, first fork the [libra2-ts-sdk](https://github.com/libra2org/libra2-ts-sdk)
 repository. For more information on how to fork see the [GitHub documentation](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 
 ## Our Development Process
@@ -127,7 +127,7 @@ and every commit is able to be built and passes all checks performed by CI.
 
 ## Issues
 
-The Aptos SDK uses [GitHub issues](https://github.com/aptos-labs/aptos-ts-sdk/issues) to track bugs. Please include
+The Libra2 SDK uses [GitHub issues](https://github.com/libra2org/libra2-ts-sdk/issues) to track bugs. Please include
 necessary information and instructions to reproduce your issue.
 
 ## Releasing a new version
@@ -155,7 +155,7 @@ After you pulled latest main, it is recommended to first do a dry-run to make su
 npm publish --dry-run
 ```
 
-This command gives us a preview of what we will be releasing to NPM, make sure it does not include hidden files or anything we dont want to publish. Also, compare the package size and the total files with what is on [npm](https://www.npmjs.com/package/@aptos-labs/ts-sdk) and validate it is reasonable.
+This command gives us a preview of what we will be releasing to NPM, make sure it does not include hidden files or anything we dont want to publish. Also, compare the package size and the total files with what is on [npm](https://www.npmjs.com/package/@libra2org/ts-sdk) and validate it is reasonable.
 
 Then, when we are ready to publish to NPM, simply run:
 

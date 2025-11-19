@@ -161,7 +161,7 @@ export class Move {
    * @returns The object address.
    *
    * A complete example in CLI:
-   * aptos move create-object-and-publish-package \
+   * libra2 move create-object-and-publish-package \
    * --package-dir path_to_directory_that_has_move.toml \
    * --address-name launchpad_addr \
    * --named-addresses "launchpad_addr=0x123,initial_creator_addr=0x456" \

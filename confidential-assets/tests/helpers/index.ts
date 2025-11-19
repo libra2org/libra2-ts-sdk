@@ -20,7 +20,7 @@ import {
   PendingTransactionResponse,
   InputSubmitTransactionData,
   TransactionSubmitter,
-} from "@aptos-labs/ts-sdk";
+} from "@libra2org/ts-sdk";
 import { ConfidentialAssetTransactionBuilder } from "../../src";
 import { TwistedEd25519PrivateKey } from "../../src";
 import { ConfidentialAsset } from "../../src";

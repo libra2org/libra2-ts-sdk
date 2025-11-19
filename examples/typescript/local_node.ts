@@ -7,7 +7,7 @@
  * to run cli commands
  */
 
-const cli = require("@aptos-labs/ts-sdk/dist/common/cli/index.js");
+const cli = require("@libra2org/ts-sdk/dist/common/cli/index.js");
 
 let localNode: any;
 const move = new cli.Move();

@@ -11,7 +11,7 @@ import {
   InputViewFunctionData,
   Network,
   NetworkToNetworkName,
-} from "@aptos-labs/ts-sdk";
+} from "@libra2org/ts-sdk";
 import { compilePackage, getPackageBytesToPublish } from "./utils";
 
 /**
@@ -19,8 +19,8 @@ import { compilePackage, getPackageBytesToPublish } from "./utils";
  * It uses the fa_coin.move module that can be found in the move folder
  *
  * Before running this example, we should compile the package locally:
- * 1. Acquire the Aptos CLI, see https://aptos.dev/tools/aptos-cli/
- * 2. cd `~/aptos-ts-sdk/examples/typescript`
+ * 1. Acquire the Libra2 CLI, see https://libra2.org
+ * 2. cd `~/libra2-ts-sdk/examples/typescript`
  * 3. Run `pnpm run your_fungible_asset`
  */
 

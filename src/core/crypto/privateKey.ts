@@ -90,7 +90,7 @@ export class PrivateKey {
         if (strict !== false) {
           // eslint-disable-next-line no-console
           console.warn(
-            "[Aptos SDK] It is recommended that private keys are AIP-80 compliant (https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-80.md). You can fix the private key by formatting it with `PrivateKey.formatPrivateKey(privateKey: string, type: 'ed25519' | 'secp256k1'): string`.",
+            "[Libra2 SDK] It is recommended that private keys are AIP-80 compliant (https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-80.md). You can fix the private key by formatting it with `PrivateKey.formatPrivateKey(privateKey: string, type: 'ed25519' | 'secp256k1'): string`.",
           );
         }
       } else if (value.startsWith(aip80Prefix)) {

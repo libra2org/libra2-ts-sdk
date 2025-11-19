@@ -1,15 +1,15 @@
 {
-  "name": "@aptos-labs/ts-sdk",
-  "description": "Aptos TypeScript SDK",
+  "name": "@libra2org/ts-sdk",
+  "description": "Libra2 TypeScript SDK",
   "packageManager": "pnpm@8.15.1",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=20.0.0"
   },
   "bugs": {
-    "url": "https://github.com/aptos-labs/aptos-ts-sdk/issues/new/choose"
+    "url": "https://github.com/libra2org/libra2-ts-sdk/issues/new/choose"
   },
-  "homepage": "https://aptos-labs.github.io/aptos-ts-sdk/",
+  "homepage": "https://libra2.org/",
   "main": "dist/common/index.js",
   "module": "dist/esm/index.mjs",
   "exports": {

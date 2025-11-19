@@ -1,7 +1,7 @@
 import { execSync } from "child_process";
 import path from "path";
 import fs from "fs";
-import { AccountAddress } from "@aptos-labs/ts-sdk";
+import { AccountAddress } from "@libra2org/ts-sdk";
 
 /* eslint-disable no-console */
 /* eslint-disable max-len */
@@ -20,16 +20,16 @@ export function compilePackage(
   args?: string[],
 ) {
   try {
-    execSync("aptos --version");
+    execSync("libra2 --version");
   } catch (e) {
-    console.log("In order to run compilation, you must have the `aptos` CLI installed.");
-    console.log("aptos is not installed. Please install it from the instructions on aptos.dev");
+    console.log("In order to run compilation, you must have the `libra2` CLI installed.");
+    console.log("libra2 is not installed. Please install it from the instructions on libra2.org");
   }
 
   const addressArg = namedAddresses.map(({ name, address }) => `${name}=${address}`).join(" ");
 
   // Assume-yes automatically overwrites the previous compiled version, only do this if you are sure you want to overwrite the previous version.
-  let compileCommand = `aptos move build-publish-payload --json-output-file ${outputFile} --package-dir ${packageDir} --named-addresses ${addressArg} --assume-yes`;
+  let compileCommand = `libra2 move build-publish-payload --json-output-file ${outputFile} --package-dir ${packageDir} --named-addresses ${addressArg} --assume-yes`;
   if (args) compileCommand += ` ${args.join(" ")}`;
 
   console.log("Running the compilation locally, in a real situation you may want to compile this ahead of time.");
